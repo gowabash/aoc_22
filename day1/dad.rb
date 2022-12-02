@@ -33,4 +33,5 @@ lines.each do |line|
 end
 elves << elf.sum
 
-puts elves.sort.last
+puts elves.sort.last(3)
+puts elves.sort.last(3).sum
