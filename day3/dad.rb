@@ -17,11 +17,31 @@ def calc1(line)
   prioritize(letter)
 end
 
-def main
+def calc2(lines)
+  a = lines[0].split('')
+  b = lines[1].split('')
+  c = lines[2].split('')
+
+  same = a-(a-b)
+  same = same-(same-c)
+  prioritize(same.first)
+end
+
+def main1
   sum = 0
   lines = File.readlines('input.dad')
   lines.each do |line|
     sum += calc1(line)
+  end
+
+  puts sum
+end
+
+def main2
+  sum = 0
+  lines = File.readlines('input.dad')
+  lines.each_slice(3) do |line|
+    sum += calc2(line)
   end
 
   puts sum
@@ -34,5 +54,15 @@ def test
   puts "52 => " + calc1("FdFDGdDDDhhHdZDjhDmpwSPVZszpwZsVgsPRZs").to_s
 end
 
-main
+def test2
+  lines = File.readlines('input.dad.simple')
+  lines.each_slice(3) do |line|
+    puts calc2(line)
+  end
+ 
+end
+
+# main
 # test
+#test2
+main2
