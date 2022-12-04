@@ -1,0 +1,28 @@
+body {
+    background-color: #808080;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    height: 900px;
+    width: 900px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    display: flex;
+    height: 150px;
+    min-width: 150px;
+    background-color: #bb2222;
+    color: #22bb22;
+    text-decoration: none;
+    font-size: 100px;
+    border-radius: 20%;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
